@@ -77,7 +77,7 @@ class Rule extends PHPWriter {
 			preg_match_all(self::$argument_rx, $specmatch['arguments'], $arguments, PREG_SET_ORDER);
 
 			foreach ($arguments as $argument){
-				$this->arguments[trim($argument[1])] = trim($argument[2]);
+				$this->arguments[trim($argument[1])] = $argument[2];
 			}
 		}
 
